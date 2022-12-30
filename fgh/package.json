@@ -1,0 +1,22 @@
+{
+  "name": "fgh",
+  "version": "1.0.0",
+  "description": "test file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisisAadi/MyAttemptAtNode.git"
+  },
+  "author": "ayush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisisAadi/MyAttemptAtNode/issues"
+  },
+  "homepage": "https://github.com/thisisAadi/MyAttemptAtNode#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
