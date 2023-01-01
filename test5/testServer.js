@@ -1,6 +1,6 @@
 const express=require('express');
-const app=express();
-const app=require('app');
+var app=express();
+var app=require('app');
 
 app.get('/',(req,resp)=>{
     resp.send("Hi! this msg to show that our server is working")
