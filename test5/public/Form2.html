@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            box-shadow: inset;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:500px;height:310px; border:1px solid blue; background-color: aliceblue;">
+         <h2>Enter Loan Information</h2>
+         <table>
+             <tr>
+                <td>1)Amount of the loan (any currency): </td>
+                <td><input type="text" id="nm" pattern="[0-9]"></td>
+             </tr>
+             <tr>
+                <td>2)Annual percentage rate of interest: </td>
+                <td><input type="text" id="per" pattern="[0-9]"></td>
+             </tr>
+             <tr>
+                <td>3)Repayment period in years: </td>
+                <td><input type="text" id="ye" pattern="[0-9]"></td>
+             </tr>
+         </table>
+         <button type="button" id="btn" onclick="calculate()">Compute</button><h2>Payment Information</h2>
+         <table>
+            <tr>
+                <td>4)Your monthly payment will be: </td>
+                <td><input  type="text" id="mnt"></td>
+             </tr>
+             <tr>
+                <td>5)Your total payment will be: </td>
+                <td><input type="text" id="tlp"></td>
+             </tr>
+             <tr>
+                <td>6)Your total interest payments will be: </td>
+                <td><input type="text" id="tilp"></td>
+             </tr>
+         </table>
+    </div>
+    <script>
+                function calculate(){
+                    var num=parseInt(document.getElementById("nm").value)
+                    var prn=parseInt(document.getElementById("per").value)
+                    var y=parseInt(document.getElementById("ye").value)
+                    var sper=prn+prn+((prn*prn)/100)
+                    var xy=1+sper/100
+                    var total=num
+                    for(i=0;i<y;i++){
+                          total=total*xy
+                    }
+                    var monthly=total/(12*y)
+                    var interest=total-num
+                    document.getElementById("mnt").setAttribute("value",monthly)
+                    document.getElementById("tlp").setAttribute("value",total)
+                    document.getElementById("tilp").setAttribute("value",interest)
+                }
+    </script>
+</body>
+</html>
