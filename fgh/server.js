@@ -3,7 +3,7 @@ var app=express();
 var path=require('path');
 
 app.get('/',(req,resp)=>{
-    resp.send("<h1>Saloni ki raand jyada porn na dekho aur jaldi se /home and /about check karo</h1>")
+    resp.send("<h1>Hi! This is show that our server is working. Now try /home and /about</h1>")
 })
 
 app.get('/home',(req,resp)=>{
